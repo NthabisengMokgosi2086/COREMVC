@@ -1,0 +1,99 @@
+﻿@model COREMVC.Models.ManagerTable
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ManagerTable</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Attrition)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Attrition)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DailyRate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DailyRate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Department)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EmployeeCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmployeeCount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HourlyRate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HourlyRate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JobInvolvement)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JobInvolvement)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JobRole)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JobRole)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MonthlyIncome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MonthlyIncome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MonthlyRate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MonthlyRate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OverTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OverTime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PercentSalaryHike)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PercentSalaryHike)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PerformanceRating)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PerformanceRating)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StandardHours)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StandardHours)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="EmployeeNumber" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

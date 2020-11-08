@@ -1,0 +1,96 @@
+﻿@model COREMVC.Models.EmployeesTable
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>EmployeesTable</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Department)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EducationField)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EducationField)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EnvironmentSatisfaction)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EnvironmentSatisfaction)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HourlyRate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HourlyRate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JobRole)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JobRole)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JobSatisfaction)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JobSatisfaction)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaritalStatus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaritalStatus)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MonthlyIncome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MonthlyIncome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RelationshipSatisfaction)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RelationshipSatisfaction)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StandardHours)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StandardHours)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StockOptionLevel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StockOptionLevel)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.EmployeeNumber">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

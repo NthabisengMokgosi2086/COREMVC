@@ -1,0 +1,117 @@
+﻿@model IEnumerable<COREMVC.Models.ManagerTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+    <form method="get" asp-action="Index">
+            <p>
+                <input type="search" placeholder="Enter Job Role or Department Name........." value="@ViewData["GetAllEmployees"]" name="search" style="width:500px;" />
+                <input type="submit" value="Search" class="btn btn-primary" />
+                <a asp-action="Index">Get All Employees</a>
+            </p>
+     </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Attrition)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DailyRate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Department)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HourlyRate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobInvolvement)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobRole)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MonthlyIncome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MonthlyRate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OverTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PercentSalaryHike)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PerformanceRating)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StandardHours)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Attrition)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DailyRate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Department)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmployeeCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HourlyRate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobInvolvement)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobRole)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MonthlyIncome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MonthlyRate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OverTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PercentSalaryHike)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PerformanceRating)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StandardHours)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.EmployeeNumber">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.EmployeeNumber">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.EmployeeNumber">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
