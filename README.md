@@ -5,3 +5,6 @@ CRUD AND LIVE SEARCH FUNCTIONALITY
 
 
 #Role-Security-Access
+
+
+# Added Analytic Tab
