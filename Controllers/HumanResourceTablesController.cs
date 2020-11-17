@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using COREMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace COREMVC.Controllers
 {
+    [Authorize]
     public class HumanResourceTablesController : Controller
     {
         private readonly DimeDataDBContext _context;
@@ -18,6 +20,7 @@ namespace COREMVC.Controllers
             _context = context;
         }
 
+        [Authorize(Roles = "Human Resource")]
         // GET: HumanResourceTables
         public async Task<IActionResult> Index()
         {

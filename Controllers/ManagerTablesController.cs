@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using COREMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace COREMVC.Controllers
 {
+    [Authorize]
     public class ManagerTablesController : Controller
     {
         private readonly DimeDataDBContext _context;
@@ -18,6 +20,7 @@ namespace COREMVC.Controllers
             _context = context;
         }
 
+        [Authorize(Roles = "Manager")]
         // GET: ManagerTables
         public async Task<IActionResult> Index()
         {
